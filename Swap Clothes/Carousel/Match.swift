@@ -1,6 +1,6 @@
 //
 //  Match.swift
-//  matchSystem
+//  Swap Clothes
 //
 //  Created by Iliane Zedadra on 18/03/2021.
 //
@@ -41,7 +41,6 @@ func dislike(article: Article) {
 
 func createMatch(count: Int,articleLiked: Article) -> Bool {
     
-    
     let match : Match = Match(articleMatched: articleLiked)
     let count = count
     
@@ -70,6 +69,7 @@ func updateStack(currentArticle : Article,matchCount: Int) -> Article? {
     if matchCount > 1 {
         return currentArticle
     }
+    
     return article
 }
 

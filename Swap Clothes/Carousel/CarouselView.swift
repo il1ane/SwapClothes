@@ -1,6 +1,6 @@
 //
 //  CarouselView.swift
-//  matchSystem
+//  Swap Clothes
 //
 //  Created by Iliane Zedadra on 18/03/2021.
 //
@@ -9,14 +9,12 @@ import SwiftUI
 
 struct CarouselView: View {
     
-    
     @State private var currentArticle = articlesStack.randomElement()
     @State private var matchCount = userA.matches.count
     @State private var stackCount = articlesStack.count
     @State private var presentMatch = false
     @State private var showPreference = false
     
-        
     var body: some View {
         
         NavigationView {
@@ -26,14 +24,14 @@ struct CarouselView: View {
                 Divider()
                     .sheet(isPresented: $presentMatch, onDismiss: { currentArticle = articlesStack.randomElement() }, content: {
                         NavigationView {
-                            MatchModal(isShowing: $presentMatch, article: $currentArticle)
+                            MatchView(isShowing: $presentMatch, article: $currentArticle)
                         }
                     })
                     
                 stackCount == 0 ?
                         VStack {
                             Spacer().frame(height: 90)
-                            EmptyStackView()
+                            OutOfArticlesView()
                         } : nil
                 
                 
@@ -47,18 +45,8 @@ struct CarouselView: View {
                 Spacer()
                 ButtonsView(matchCount: $matchCount, presentMatch: $presentMatch, stackCount: $stackCount, article: $currentArticle)
             }
-            .navigationBarItems(trailing: Button(action: {  }, label: {
-                Button(action: { showPreference.toggle() }, label: {
-                    Image(systemName: "slider.horizontal.3").foregroundColor(.mint)
-                })
-            }))
-            .navigationBarTitle("")
-    }.sheet(isPresented: $showPreference, content: {
-        
-        PreferencesView(isPresented: $showPreference, settingsStore: SettingsStore() )
-        
-    })
-  }
+            .navigationBarTitle("Carousel")
+    }  }
 }
 
 struct CarouselView_Previews: PreviewProvider {
@@ -184,7 +172,6 @@ struct CardView: View {
                     
                 }
             }
-            
             .rotationEffect(.degrees(Double(offset.width / 5)))
             .offset(x: offset.width * 5, y: 0)
             .opacity(2 - Double(abs(offset.width / 50)))
@@ -209,9 +196,7 @@ struct CardView: View {
                             isSwiping = false
                         }
                        
-                    }
-                    
-                    .onEnded { _ in
+                    }.onEnded { _ in
                         
                         //Swipe left (Dislike)
                         if offset.width < -15 {
@@ -219,16 +204,14 @@ struct CardView: View {
                             dislike(article: article ?? errorCard)
                             stackCount = checkStackCount(stack : articlesStack)
                             article = articlesStack.randomElement()
-                            
-                            
                         }
+                        
                         //Swipe right (Like)
                         else if offset.width > 15 {
                             
                             like(article: article ?? errorCard)
                             presentMatch = createMatch(count: matchCount, articleLiked: article ?? errorCard)
                             stackCount = checkStackCount(stack: articlesStack)
-                            
                             if !presentMatch {
                                 article =   articlesStack.randomElement()
                             }
@@ -245,9 +228,11 @@ struct CardView: View {
     }
 }
 
-struct MatchModal: View {
+struct MatchView: View {
+    
     @Binding var isShowing:Bool
     @Binding var article:Article?
+    
     var body: some View {
         
         ZStack {
@@ -260,7 +245,6 @@ struct MatchModal: View {
                     Text("Match").font(.largeTitle).bold().foregroundColor(.mint)
                     Text("!").font(.largeTitle).bold()
                 }
-                
                 
                 VStack {
                     
@@ -292,7 +276,6 @@ struct MatchModal: View {
         }.navigationBarItems(trailing : Button(action: { isShowing.toggle() }, label: {
             Text("Dismiss").foregroundColor(.mint)
         }))
-        
     }
 }
 

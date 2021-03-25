@@ -17,7 +17,7 @@ struct Article:Identifiable, Equatable, Hashable {
     var category:String
     var size:String
     var state:String
-    
+
     static func == (lhs: Self, rhs: Self) -> Bool {
         lhs.id == rhs.id
     }

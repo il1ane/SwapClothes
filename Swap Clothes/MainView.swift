@@ -21,22 +21,6 @@ struct MainView: View {
                     Image(systemName: "arrow.down.heart")
                     Text("Swap")
                 }
-            MessageList()
-                .tabItem {
-                    Image(systemName: "message")
-                    Text("Messages")
-                }
-            Text("🤓")
-                .tabItem {
-                    Image(systemName: "plus.app")
-                    Text("Add")
-                }
-            Text("🥰")
-                .tabItem {
-                    Image(systemName: "person.circle")
-                    Text("Profile")
-                    
-                }
         }
         .accentColor(.mint)
               
