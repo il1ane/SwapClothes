@@ -8,7 +8,6 @@
 import Foundation
 
 struct Article:Identifiable, Equatable, Hashable {
-
     var id = UUID()
     var name:String
     var image:String
@@ -22,6 +21,8 @@ struct Article:Identifiable, Equatable, Hashable {
         lhs.id == rhs.id
     }
 }
+
+//Datasets
 
 //A
 var tshirtA1 = Article(name: "White T-Shirt", image: "tshirtA1", description: "Simple white T-Shirt, wore it only 2 times.", category: "Haut", size: "M", state: "Neuf")
@@ -84,5 +85,5 @@ Brown Check Jacquard GG Scarf
 Rectangular knit wool-blend scarf featuring check pattern in tones of brown and beige. Jacquard knit logo pattern in brown throughout. Fringed detailing at ends.
 """, category: "Scarf", size: "Approx. 86.5 length x 14 width.", state: "Brand New")
 
-//Error
-var errorCard = Article(name: "Oops...", image: "cardError", description: "", category: "", size: "", state: "")
+//Error handling
+var errorCard = Article(name: "Oops...", image: "", description: "", category: "", size: "", state: "")

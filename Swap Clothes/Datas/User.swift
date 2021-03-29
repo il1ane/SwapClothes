@@ -8,22 +8,20 @@
 import Foundation
 
 struct User:Identifiable, Equatable, Hashable {
-    static func == (lhs: User, rhs: User) -> Bool {
-        lhs.id == rhs.id
-    }
-    
     var id = UUID()
     var name:String
     var ownedArticles: Set<Article> = []
     var likedArticles: Set<Article> = []
     var matches: Set<Match> = []
     
-    //todo : ajouter une fonction pour aimer un article
+    static func == (lhs: User, rhs: User) -> Bool {
+        lhs.id == rhs.id
+    }
 }
 
 //DataSet
 
-//A
+//A Carousel is from userA point of view
 var userA:User = User(name: "User A", ownedArticles: [tshirtA1, sweaterA1, shoesA1, pantsA1, scarfA1], likedArticles: [], matches: [])
 
 //B

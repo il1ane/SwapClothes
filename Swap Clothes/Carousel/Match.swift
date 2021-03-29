@@ -8,10 +8,8 @@
 import Foundation
 
 struct Match:Identifiable, Hashable {
-    
     var articleMatched:Article
     var id = UUID()
-    
 }
 
 let matchTest = Match(articleMatched: errorCard)
@@ -31,13 +29,11 @@ func checkMatchCount() -> Int {
 
 func like(article: Article) {
     userA.likedArticles.insert(article)
-    
 }
 
 func dislike(article: Article) {
     articlesStack.remove(article)
 }
-
 
 func createMatch(count: Int,articleLiked: Article) -> Bool {
     
@@ -60,7 +56,6 @@ func createMatch(count: Int,articleLiked: Article) -> Bool {
     
     articlesStack.remove(articleLiked)
     return false
-    
 }
 
 func updateStack(currentArticle : Article,matchCount: Int) -> Article? {
