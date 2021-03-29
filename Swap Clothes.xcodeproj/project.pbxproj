@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		912281E22603535400082229 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912281E12603535400082229 /* AppDelegate.swift */; };
 		912281E42603535400082229 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912281E32603535400082229 /* SceneDelegate.swift */; };
-		912281E62603535400082229 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912281E52603535400082229 /* ContentView.swift */; };
 		912281E82603535500082229 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 912281E72603535500082229 /* Assets.xcassets */; };
 		912281EB2603535500082229 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 912281EA2603535500082229 /* Preview Assets.xcassets */; };
 		912281EE2603535500082229 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 912281EC2603535500082229 /* LaunchScreen.storyboard */; };
@@ -20,14 +19,12 @@
 		912282052603578800082229 /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912282042603578800082229 /* CarouselView.swift */; };
 		912510B326035AEC00C5B97B /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912510B226035AEC00C5B97B /* Card.swift */; };
 		91577F722606433500C16DA3 /* OutOfArticlesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91577F712606433500C16DA3 /* OutOfArticlesView.swift */; };
-		91B285222608C4E1003319F2 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B285212608C4E1003319F2 /* MainView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		912281DE2603535400082229 /* Swap Clothes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swap Clothes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		912281E12603535400082229 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		912281E32603535400082229 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		912281E52603535400082229 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		912281E72603535500082229 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		912281EA2603535500082229 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		912281ED2603535500082229 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -39,7 +36,6 @@
 		912282042603578800082229 /* CarouselView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
 		912510B226035AEC00C5B97B /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		91577F712606433500C16DA3 /* OutOfArticlesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutOfArticlesView.swift; sourceTree = "<group>"; };
-		91B285212608C4E1003319F2 /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,8 +70,6 @@
 			children = (
 				912281E12603535400082229 /* AppDelegate.swift */,
 				912281E32603535400082229 /* SceneDelegate.swift */,
-				912281E52603535400082229 /* ContentView.swift */,
-				91B285212608C4E1003319F2 /* MainView.swift */,
 				91343A94260A26A200C4847E /* Datas */,
 				9122820A260357A400082229 /* Carousel */,
 				912281E72603535500082229 /* Assets.xcassets */,
@@ -190,9 +184,7 @@
 				912281E22603535400082229 /* AppDelegate.swift in Sources */,
 				912281E42603535400082229 /* SceneDelegate.swift in Sources */,
 				912281FA2603537700082229 /* User.swift in Sources */,
-				912281E62603535400082229 /* ContentView.swift in Sources */,
 				91577F722606433500C16DA3 /* OutOfArticlesView.swift in Sources */,
-				91B285222608C4E1003319F2 /* MainView.swift in Sources */,
 				912282052603578800082229 /* CarouselView.swift in Sources */,
 				912510B326035AEC00C5B97B /* Card.swift in Sources */,
 				912281FD2603539B00082229 /* Match.swift in Sources */,
