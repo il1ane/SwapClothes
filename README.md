@@ -1,6 +1,6 @@
 # Swap-Clothes
 
-Carousel made with SwiftUI
+Carousel made with SwiftUI, for Apple Foundation Program Extended course.
 
 Screenshots : 
 
